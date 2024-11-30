@@ -1,0 +1,7 @@
+# 二维码存放目录
+
+spring:
+  datasource:
+    url: jdbc:mysql://47.122.0.58:3307/aiwendao
+    username: root
+    password: Wzp123!@#
