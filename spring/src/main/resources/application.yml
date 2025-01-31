@@ -11,6 +11,9 @@ spring:
       static-locations: classpath:/static/,classpath:/assets/
 
 
+
+
+
 mybatis-plus:
   global-config:
     db-config:
@@ -20,3 +23,5 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:/mapper/*.xml
   type-aliases-package: com.metayoo.study.entity
+
+

@@ -5,3 +5,27 @@ spring:
     url: jdbc:mysql://47.122.0.58:3307/aiwendao
     username: root
     password: Wzp123!@#
+
+  quartz:
+    job-store-type: jdbc # 使用数据库存储任务数据
+    jdbc:
+      initialize-schema: always # 自动初始化表
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: MyScheduler
+          threadPool:
+            threadCount: 10
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+#            dataSource: myDataSource # 指定数据源
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            useProperties: false
+            tablePrefix: qrtz_ # 数据库表的前缀
+
+          dataSource:
+            url: jdbc:mysql://47.122.0.58:3307/aiwendao
+            username: root
+            password: Wzp123!@#
+
